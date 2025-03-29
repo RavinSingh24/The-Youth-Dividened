@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Youth Dividend - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <img class="logo" src="logonew.png">
+        </div>
+      
+        <div class="navbar">
+            <div class="logo">
+                
+            </div>
+            <div class="nav-container">  <!-- Wraps navigation & search together -->
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search...">
+                    <button class="search-button">🔍</button>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <form action="send_mail.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+            
+            <button type="submit">Send</button>
+        </form>
+        
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    color: #00204d;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* Keeps logo on left, rest on right */
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #00204d;
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* WRAPPING NAV + SEARCH TOGETHER */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;  /* Space between nav links and search bar */
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+   /* background: rgba(255, 255, 255, 0.1);  Subtle hover effect */
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+
+
+/* SEARCH BAR */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid white; /* Thin line effect */
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    width: 180px;
+    color: white;
+    transition: width 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+    width: 250px;
+    border-bottom: 2px solid #9ba9d4;
+}
+
+/* SEARCH BUTTON (OPTIONAL) */
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00204d;
+    color: white;
+    padding: 50px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+/* Button */
+.btn {
+    background-color: white;
+    color: #00204d;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Article Grid */
+.articles {
+    padding: 50px;
+    text-align: center;
+}
+
+.articles-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.article-card {
+    background: white;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.article-card:hover{
+    background: rgb(226, 225, 225);
+}
+
+.article-card img {
+    width: 100%;
+}
+
+/* About & Contact Sections */
+.about, .contact {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px; /* Adds top padding & inner space */
+    width: 100%; 
+    max-width: 700px; 
+    margin: 40px auto 0; /* Pushes it down from navbar */
+    border-radius: 1px;
+    min-height: 100vh; /* Makes sure it extends down */
+}
+
+
+/* Form Styling */
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #00204d;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #bbb9b9;
+}

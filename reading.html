@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading - Article</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+            color: #00204d;
+        }
+        .navbar {
+            background-color: #00204d;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .navbar .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+        .navbar .nav-links a:hover {
+            background-color: #003366;
+        }
+        .article-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .article-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="articles.html">Articles</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="article-container">
+        <h1 id="article-title">Loading...</h1>
+        <iframe id="article-frame" src=""></iframe>
+    </section>
+
+    <script>
+        const articles = [
+            {
+                title: "The Future of AI in Daily Life",
+                link: "https://docs.google.com/document/d/e/2PACX-1vRH8iIdLXXPffNjblPXhjei_y6TNYzeyCxOmeFySaBLX3s3i2nsJD_WYLymoDcrOZScpKo_a4oVRMYy/pub"
+            },
+            {
+                title: "The Scarcity Illusion: How Hype and Shortages Control Our Choices",
+                link: "https://docs.google.com/document/d/e/2PACX-1vQmPS5tTwTAPk0OBCLG050GXfJOvil-wAgLG6gGB3zqvIfTBkg6WUpq3HuSVOUBbSkA3WhNx6w56aHY/pub"
+            },
+            {
+                title: "Predicted implications of the 2027 carbon border adjustment mechanism (CBAM) in the UK",
+                link: "https://docs.google.com/document/d/e/2PACX-1vRbEw6OdyNOqmupGHr-1TCKR1vgfatu2USKsvPzzX9VpORoG4d6mbcG5FY6S8o1dIm209RbRgQ5xVhR/pub"
+            },
+            {
+                title: "Trump’s Tariffs and Their Global Inflationary Impact",
+                link: "https://docs.google.com/document/d/e/2PACX-1vRRisB-4rBCptKVBWhZRwAd2ld7xrBa0TLplVbyfmJ9C4AibIkXt1bNB0uAEz_leS5_qngOb5nqVUKC/pub"
+            }
+        ];
+
+        // Get the article index from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleIndex = urlParams.get("article");
+
+        if (articleIndex !== null && articles[articleIndex]) {
+            document.getElementById("article-title").textContent = articles[articleIndex].title;
+            document.getElementById("article-frame").src = articles[articleIndex].link;
+        } else {
+            document.getElementById("article-title").textContent = "Article not found";
+            document.getElementById("article-frame").style.display = "none";
+        }
+    </script>
+</body>
+</html>
