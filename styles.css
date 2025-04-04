@@ -168,3 +168,56 @@ button {
 button:hover {
     background: #bbb9b9;
 }
+
+/*FOOTER */
+.site-footer {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.footer-logo h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.footer-links a {
+    display: block;
+    color: #cccccc;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-credit {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
