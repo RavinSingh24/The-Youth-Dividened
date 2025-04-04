@@ -69,6 +69,64 @@
             color: #555;
             line-height: 1.4;
         }
+        .author {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+        }
+        /*FOOTER */
+.site-footer {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.footer-logo h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.footer-links a {
+    display: block;
+    color: #cccccc;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-credit {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+
     </style>
 </head>
 <body>
@@ -91,25 +149,29 @@
                 title: "Government policy in Australia regarding the latest change in the Cash rate by the RBA and its effects on the CFM and whether this decision was a good or bad one amidst the current battles with inflation?",
                 description: "As of December 11 2024, the Reserve Bank of Australia (RBA) has decided it will maintain the...",
                 image: "article1Image.png",
-                link: "reading.html?article=0"
+                link: "reading.html?article=0",
+                author: "unknown"
             },
             {
                 title: "The Scarcity Illusion: How Hype and Shortages Control Our Choices",
                 description: "Why do people rush to buy a limited-edition phone they don’t really need, pay triple the price...",
                 image: "article2Image.png",
-                link: "reading.html?article=1"
+                link: "reading.html?article=1",
+                author: "unknown"
             },
             {
                 title: "Predicted implications of the 2027 carbon border adjustment mechanism (CBAM) in the UK",
                 description: "The United Kingdom plans on implementing a carbon border adjustment mechanism (CBAM) from the 1st of January...",
                 image: "article3Image.png",
-                link: "reading.html?article=2"
+                link: "reading.html?article=2",
+                author: "Sanjay Ramakrishnan IB1"
             },
             {
                 title: "Trump’s Tariffs and Their Global Inflationary Impact",
                 description: "In early 2025, former U.S. President Donald Trump significantly intensified his administration’s...",
-                image: "article4Image.png",
-                link: "reading.html?article=3"
+                image: "article3Image.png",
+                link: "reading.html?article=3",
+                author: "Shoken Tsurumaru"
             },
         ];
 
@@ -123,6 +185,7 @@
                 <div class="article-content">
                     <h2>${article.title}</h2>
                     <p>${article.description}</p>
+                    <div class="author">By ${article.author}</div>
                 </div>
             `;
             articleDiv.addEventListener("click", () => {
@@ -131,5 +194,19 @@
             articlesContainer.appendChild(articleDiv);
         });
     </script>
+      <!--FOOTER-->
+      <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logonew.png" alt="The Youth Dividend Logo">
+                <h3>The Youth Dividend</h3>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:theyouthdividend@gmail.com">📧 theyouthdividend@gmail.com</a>
+                <a href="https://instagram.com/theyouthdividend" target="_blank">📸 @theyouthdividend</a>
+            </div>
+        </div>
+        <p class="footer-credit">&copy; 2025 The Youth Dividend. All rights reserved.</p>
+    </footer>
 </body>
 </html>
